@@ -16,5 +16,7 @@ class Complex {
 		Complex sub(Complex two);
 		Complex mult(Complex three);
 		Complex div(Complex four);
-
+		Complex cconj();
+		double magnitude();
+		double phase();
 };
