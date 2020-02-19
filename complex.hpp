@@ -7,8 +7,10 @@ class Complex {
 	public:
 		Complex();
 		Complex(double real, double imag);
+		Complex(double real);
 		Complex(const Complex &Comp);
 		double real();
 		double imag();
 		void print();
+		Complex add(Complex one, Complex two);
 };
