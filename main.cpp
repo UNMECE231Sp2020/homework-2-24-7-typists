@@ -30,7 +30,12 @@ int main() {
 	c2 = c3.div(c4);
 	c2.print();
 	std::cout << "Should be 0.372791 - 0.0946746j" << std::endl;
-	/*
+
+	//Complex conjugate
+	Complex c5 = c3.cconj();
+	std::cout << "Complex conjugate: ";
+	c5.print();
+
 	//Magnitude
 	std::cout << "Magnitude: " << c3.magnitude() << " should be 5" << std::endl;
 	std::cout << "Magnitude: " << c4.magnitude() << " should be 13" << std::endl;
@@ -38,7 +43,7 @@ int main() {
 	//Phase
 	std::cout << "Phase: " << c3.phase() << " should be 53.1301" << std::endl;
 	std::cout << "Phase: " << c4.phase() << " should be 67.3801" << std::endl;
-
+	/*
 	std::cout << "Testing overloaded operators" << std::endl;
 
 	std::cout << c3 + c4 << std::endl;

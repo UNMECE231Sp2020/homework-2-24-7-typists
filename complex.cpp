@@ -3,6 +3,7 @@
 #include "complex.hpp"
 #include <cmath>
 
+
 Complex::Complex() {
 	_real = 0;
 	_imag = 0;
@@ -61,10 +62,31 @@ Complex Complex::mult(Complex three) {
 
 Complex Complex::div(Complex four) {
 	Complex comp_div;
-	denom = pow(four._real,2) + pow(four._imag,2)
+	double denom = pow(four._real,2) + pow(four._imag,2);
 	comp_div._real = ((_real*four._real) + (_imag*four._imag))/denom;
 	comp_div._imag = ((_imag*four._real) - (_real*four._imag))/denom;
 	return comp_div;
 }
+
+Complex Complex::cconj() {
+	Complex comp_cconj;
+	comp_cconj._real = _real;
+	comp_cconj._imag = _imag * (-1);
+	return comp_cconj;
+}
+
+double Complex::magnitude() {
+	double magnitude;
+	magnitude = sqrt(pow(_real,2) + pow(_imag,2));
+	return magnitude;
+}
+
+double Complex::phase() {
+	double angle;
+	angle = atan(_imag/_real)*(180/3.1415926535);
+	return angle;
+}
+
+
 
 
