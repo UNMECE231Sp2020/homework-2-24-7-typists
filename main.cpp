@@ -14,10 +14,11 @@ int main() {
 	Complex c4(5.0, 12.0);
 
 	std::cout << std::endl;
+
 	c1=c3.add(c4);
 	c1.print();
 	std::cout << "Should be 8 + 16j" << std::endl;
-
+	
 	c2=c3.sub(c4);
 	c2.print();
 	std::cout << "Should be -2 - 8j" << std::endl;

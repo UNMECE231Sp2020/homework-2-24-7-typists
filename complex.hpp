@@ -13,4 +13,8 @@ class Complex {
 		double imag();
 		void print();
 		Complex add(Complex one);
+		Complex sub(Complex two);
+		Complex mult(Complex three);
+		Complex div(Complex four);
+
 };
