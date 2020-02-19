@@ -12,5 +12,5 @@ class Complex {
 		double real();
 		double imag();
 		void print();
-		Complex add(Complex one, Complex two);
+		Complex add(Complex one);
 };
