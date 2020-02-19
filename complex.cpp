@@ -1,6 +1,6 @@
 //Complex .cpp
 #include <iostream>
-
+#include "complex.hpp"
 
 Complex::Complex() {
 	_real = 0;
@@ -14,7 +14,7 @@ Complex::Complex(double real, double imag) {
 
 Complex::Complex(const Complex &Comp) {
 	_real = Comp._real;
-	_imag = comp._imag;
+	_imag = Comp._imag;
 }
 
 
@@ -28,7 +28,7 @@ double Complex::imag() {
 
 
 void Complex::print() {
-	std::cout << "real: "  << _real << " imag: " << _imag; << std::endl;
+	std::cout << "real: "  << _real << " imag: " << _imag << std::endl;
 }
 
 

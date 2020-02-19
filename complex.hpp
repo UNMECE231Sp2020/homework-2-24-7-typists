@@ -1,6 +1,6 @@
 //Complex .h
 
-Class Complex {
+class Complex {
 	private:
 		double _real;
 		double _imag;
