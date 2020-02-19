@@ -35,7 +35,7 @@ double Complex::imag() {
 
 
 void Complex::print() {
-	std::cout << "real: "  << _real << " imag: " << _imag << std::endl;
+	std::cout << "real: "  << _real << " imag: " << _imag << "j" << std::endl;
 }
 
 
@@ -63,6 +63,13 @@ Complex Complex::mult(Complex three) {
 Complex Complex::div(Complex four) {
 	Complex comp_div;
 	double denom = pow(four._real,2) + pow(four._imag,2);
+	//check for divide by zero error and return 0 + 0j as well as warning message
+	if (denom == 0){
+		std::cout << "Divide by zero Error" << std::endl;
+		comp_div._real = 0;
+		comp_div._imag = 0;
+		return comp_div;
+	}
 	comp_div._real = ((_real*four._real) + (_imag*four._imag))/denom;
 	comp_div._imag = ((_imag*four._real) - (_real*four._imag))/denom;
 	return comp_div;
@@ -83,6 +90,21 @@ double Complex::magnitude() {
 
 double Complex::phase() {
 	double angle;
+	//for the case on the imaginary axis if imag positive angle is 90 otherwise -90
+	if (_real == 0) {
+		if (_imag > 0) {
+			angle = 90;
+		}
+		else if (_imag < 0){
+			angle = -90;
+		}
+		//in the case real and imag is zero the angle is undefined
+		else {
+			std::cout << "angle is undefined" << std::endl;
+			angle = 0;
+		}
+		return angle;
+	}
 	angle = atan(_imag/_real)*(180/3.1415926535);
 	return angle;
 }
