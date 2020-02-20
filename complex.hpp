@@ -19,4 +19,13 @@ class Complex {
 		Complex cconj();
 		double magnitude();
 		double phase();
+
+		Complex operator+(Complex comp_num);	
+		Complex operator-(Complex comp_num);
+		Complex operator*(Complex comp_num);
+		Complex operator/(Complex comp_num);
+		Complex operator=(Complex comp_num);
+	
+		friend std::ostream& operator<<(std::ostream &out, const Complex comp_num);
+		//friend std::istream& operator>>(std::istream &in, Complex comp_num);
 };

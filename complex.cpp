@@ -109,6 +109,40 @@ double Complex::phase() {
 	return angle;
 }
 
+Complex Complex::operator+(Complex comp_nums){
+	Complex temp(_real, _imag);
+	return temp.add(comp_nums);
+}
 
+Complex Complex::operator-(Complex comp_nums){
+	Complex temp(_real, _imag);
+	return temp.sub(comp_nums);
+}
 
+Complex Complex::operator*(Complex comp_nums){
+	Complex temp(_real, _imag);
+	return temp.mult(comp_nums);
+}
+
+Complex Complex::operator/(Complex comp_nums){
+	Complex temp(_real, _imag);
+	return temp.div(comp_nums);
+}
+
+Complex Complex::operator=(Complex comp_nums){
+	_real = comp_nums._real;
+	_imag = comp_nums._imag;
+	return *this;
+}
+
+std::ostream& operator<<(std::ostream &out, const Complex comp_num) {
+	out << comp_num._real << " " << comp_num._imag;
+	return out;
+}
+
+/*
+std::istream& operator<<(std::istream &in, Complex comp_num) {
+	in >> comp_num._real >> comp_num._imag;
+	return in;
+}*/
 

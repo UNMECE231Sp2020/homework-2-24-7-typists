@@ -65,13 +65,16 @@ int main() {
 	std::cout << std::endl;
 
 
-	/*
+	
 	std::cout << "Testing overloaded operators" << std::endl;
-
 	std::cout << c3 + c4 << std::endl;
 	std::cout << c4 - c3 << std::endl;
 	std::cout << c3 * c4 << std::endl;
 	std::cout << c3 / c4 << std::endl;
-	*/
+	//add a test for assignment operator
+	Complex c11;
+	Complex c12(27.0, 27.0);
+	c11 = c12;
+	c11.print();
 	return 0;
 }
