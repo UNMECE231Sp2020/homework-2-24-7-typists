@@ -76,5 +76,7 @@ int main() {
 	Complex c12(27.0, 27.0);
 	c11 = c12;
 	c11.print();
+	std::cin >> c1;
+	std::cout << c1 << std::endl;
 	return 0;
 }

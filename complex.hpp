@@ -27,5 +27,5 @@ class Complex {
 		Complex operator=(Complex comp_num);
 	
 		friend std::ostream& operator<<(std::ostream &out, const Complex comp_num);
-		//friend std::istream& operator>>(std::istream &in, Complex comp_num);
+		friend std::istream& operator>>(std::istream &in, Complex comp_num);
 };

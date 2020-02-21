@@ -140,9 +140,8 @@ std::ostream& operator<<(std::ostream &out, const Complex comp_num) {
 	return out;
 }
 
-/*
-std::istream& operator<<(std::istream &in, Complex comp_num) {
+std::istream& operator>>(std::istream &in, Complex comp_num) {
 	in >> comp_num._real >> comp_num._imag;
 	return in;
-}*/
+}
 
