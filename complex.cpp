@@ -105,7 +105,7 @@ double Complex::phase() {
 		}
 		return angle;
 	}
-	angle = atan(_imag/_real)*(180/3.1415926535);
+	angle = atan(_imag/_real)*(180/3.1415926535); //convert arctan (radians) to degrees
 	return angle;
 }
 
@@ -140,7 +140,7 @@ std::ostream& operator<<(std::ostream &out, const Complex comp_num) {
 	return out;
 }
 
-std::istream& operator>>(std::istream &in, Complex comp_num) {
+std::istream& operator>>(std::istream &in, Complex &comp_num) {
 	in >> comp_num._real >> comp_num._imag;
 	return in;
 }

@@ -2,6 +2,7 @@
 #include "complex.hpp"
 
 int main() {
+	//Initialize some Complex number for testing
 	Complex c1;
 	c1.print();
 
@@ -15,6 +16,7 @@ int main() {
 
 	std::cout << std::endl;
 
+	//Test all the functions in class Complex one at a time
 	c1=c3.add(c4);
 	c1.print();
 	std::cout << "Should be 8 + 16j\n" << std::endl;
@@ -32,7 +34,9 @@ int main() {
 	std::cout << "Should be 0.372791 - 0.0946746j\n" << std::endl;
 
 	//Complex conjugate
-	Complex c5 = c3.cconj();
+	Complex c5 = c3; //copy constructor
+	c5.print();
+	c5 = c3.cconj();
 	std::cout << "Complex conjugate: ";
 	c5.print();
 	std::cout << std::endl;
@@ -65,18 +69,31 @@ int main() {
 	std::cout << std::endl;
 
 
-	
+	//Test overloaded operators
 	std::cout << "Testing overloaded operators" << std::endl;
 	std::cout << c3 + c4 << std::endl;
 	std::cout << c4 - c3 << std::endl;
 	std::cout << c3 * c4 << std::endl;
-	std::cout << c3 / c4 << std::endl;
-	//add a test for assignment operator
+	std::cout << c3 / c4 << "\n" << std::endl;
+	
+	//Test for assignment operator
 	Complex c11;
 	Complex c12(27.0, 27.0);
 	c11 = c12;
 	c11.print();
+	std::cout << std::endl;
+
+	//Test input of a complex number
+	std::cout << "Please enter a complex number seperated by a space" << std::endl;
 	std::cin >> c1;
+	std::cout << "You entered: " << std::endl;
 	std::cout << c1 << std::endl;
+
+	//Test getter functions
+	std::cout << "\nTesting getter function" << std::endl;
+	c1.print();
+	std::cout << "Real part: " << c1.real() << std::endl;
+	std::cout << "Imaginary part: " << c1.imag() << std::endl;
+
 	return 0;
 }
